@@ -19,7 +19,9 @@ public class WeatherForecastMetricsServiceImpl implements WeatherForecastMetrics
         WeatherMetrics weatherMetrics = null;
         FutureWeatherForecast futureWeatherForecast = weatherForecastService.fiveDaysWeatherForecast(city);
 
-
+        if(futureWeatherForecast != null){
+            weatherMetrics = new WeatherMetrics();
+        }
 
         return weatherMetrics;
     }
