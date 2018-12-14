@@ -14,6 +14,14 @@
     <name>weather-forecast</name>
     <description>retrieve weather metrics of a specific city</description>
 
+    <contributors>
+        <contributor>
+            <name>Dorjan Dika</name>
+            <organizationUrl>https://www.linkedin.com/in/dorjandika/</organizationUrl>
+            <email>dorjan.dika@gmail.com</email>
+        </contributor>
+    </contributors>
+
     <properties>
         <java.version>1.8</java.version>
         <junit-platform.version>5.3.1</junit-platform.version>
