@@ -25,7 +25,7 @@ public class OpenweathermapImpl implements WeatherForecastService {
     }
 
     @Override
-    public FutureWeatherForecast FiveDaysWeatherForecast(String city) {
+    public FutureWeatherForecast fiveDaysWeatherForecast(String city) {
         UriComponentsBuilder uriBuilder = UriComponentsBuilder
                 .fromUriString(api_url)
                 .queryParam("q", city)

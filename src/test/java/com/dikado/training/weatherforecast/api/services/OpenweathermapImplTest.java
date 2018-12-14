@@ -24,7 +24,7 @@ class OpenweathermapImplTest {
 
     @Test
     void fiveDaysWeatherForecast() {
-        FutureWeatherForecast futureWeatherForecast = weatherForecastService.FiveDaysWeatherForecast("London");
+        FutureWeatherForecast futureWeatherForecast = weatherForecastService.fiveDaysWeatherForecast("London");
         assertNotNull(futureWeatherForecast);
     }
 }

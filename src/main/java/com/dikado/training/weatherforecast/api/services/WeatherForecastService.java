@@ -4,6 +4,6 @@ import com.dikado.training.weatherforecast.api.model.FutureWeatherForecast;
 
 public interface WeatherForecastService {
 
-    FutureWeatherForecast FiveDaysWeatherForecast(String city);
+    FutureWeatherForecast fiveDaysWeatherForecast(String city);
 
 }
