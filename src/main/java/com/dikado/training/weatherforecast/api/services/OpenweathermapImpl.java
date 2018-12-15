@@ -29,7 +29,7 @@ public class OpenweathermapImpl implements WeatherForecastService {
     public WeatherMetrics fiveDaysWeatherForecast(String city) {
         UriComponentsBuilder uriBuilder = UriComponentsBuilder
                 .fromUriString(api_url)
-                .queryParam("city", city)
+                .queryParam("q", city)
                 .queryParam("APPID",api_key);
 
         URI uri = uriBuilder.build(true).toUri();
