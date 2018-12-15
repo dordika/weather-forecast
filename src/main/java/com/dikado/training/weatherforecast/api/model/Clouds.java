@@ -9,7 +9,7 @@ public class Clouds implements Serializable
 {
 
     private Integer all;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
     private final static long serialVersionUID = -4763063369602461536L;
 
     public Integer getAll() {

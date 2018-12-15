@@ -1,7 +1,7 @@
 package com.dikado.training.weatherforecast.services;
 
-import com.dikado.training.weatherforecast.domain.WeatherMetrics;
+import com.dikado.training.weatherforecast.domain.AvarageMetricsDto;
 
 public interface WeatherForecastMetricsService {
-    WeatherMetrics getWeatherMetricsByCity(String city);
+    AvarageMetricsDto getWeatherMetricsByCity(String city);
 }

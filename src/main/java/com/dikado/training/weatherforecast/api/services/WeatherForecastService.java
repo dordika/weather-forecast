@@ -1,9 +1,9 @@
 package com.dikado.training.weatherforecast.api.services;
 
-import com.dikado.training.weatherforecast.api.model.FutureWeatherForecast;
+import com.dikado.training.weatherforecast.domain.WeatherMetrics;
 
 public interface WeatherForecastService {
 
-    FutureWeatherForecast fiveDaysWeatherForecast(String city);
+    WeatherMetrics fiveDaysWeatherForecast(String city);
 
 }

@@ -1,13 +1,14 @@
 package com.dikado.training.weatherforecast.api.services;
 
 import com.dikado.training.weatherforecast.api.model.FutureWeatherForecast;
+import com.dikado.training.weatherforecast.converter.WeatherForecastMapper;
+import com.dikado.training.weatherforecast.domain.WeatherMetrics;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.net.URLEncoder;
 
 @Service
 public class OpenweathermapImpl implements WeatherForecastService {
@@ -25,13 +26,14 @@ public class OpenweathermapImpl implements WeatherForecastService {
     }
 
     @Override
-    public FutureWeatherForecast fiveDaysWeatherForecast(String city) {
+    public WeatherMetrics fiveDaysWeatherForecast(String city) {
         UriComponentsBuilder uriBuilder = UriComponentsBuilder
                 .fromUriString(api_url)
-                .queryParam("q", city)
+                .queryParam("city", city)
                 .queryParam("APPID",api_key);
 
         URI uri = uriBuilder.build(true).toUri();
-        return restTemplate.getForObject(uri, FutureWeatherForecast.class);
+        FutureWeatherForecast futureWeatherForecast = restTemplate.getForObject(uri, FutureWeatherForecast.class);
+        return WeatherForecastMapper.futureWeatherForecastToWeatherMetrics(futureWeatherForecast);
     }
 }
